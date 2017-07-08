@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Destroys itself when activated
+
+;Triggers
+
+
+:state=0,activated=1:runfpi=destroy/crumble.fpi
+
+;End of Script

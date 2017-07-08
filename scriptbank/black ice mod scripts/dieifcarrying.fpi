@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = carrying kill.
+
+;Triggers
+
+:state=0:state=1
+:state=1,plrcarrying:addhealth=-10000,state=1
+
+;End of Script

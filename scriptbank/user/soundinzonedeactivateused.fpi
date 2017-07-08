@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plays a sound ONCE ONLY when the player is in the zone, and deactivates the "if used" field!
+
+;Triggers
+
+:state=0,plrwithinzone=1:activateifused=0,sound=$0,state=1
+:state=1,plrwithinzone=0:resethead
+
+;End of Script

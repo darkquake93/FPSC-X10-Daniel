@@ -1,0 +1,13 @@
+;Health Script
+
+;Header
+
+desc          = Activates pain effect when player health is less than 400
+
+;Triggers
+
+:state=0:plrwobble=1,state=1
+:state=1,plrhealthless=425:setposteffect=pain,etimerstart,plrwobble=20,state=3
+:state=3,plrhealthgreater=425,etimergreater=150:setposteffect=nomadmod,plrwobble=1,state=1
+
+;End of Script

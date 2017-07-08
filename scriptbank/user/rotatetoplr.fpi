@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Rotates the entity to the player
+;Triggers
+
+:state=0,plrcanbeseen:rotatetoplr
+
+;End of Script

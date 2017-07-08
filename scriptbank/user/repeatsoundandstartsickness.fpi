@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Sound loop and appear instantly
+
+;Triggers
+
+:state=0:loopsound=$0,setalphafade=100,runfpi=effects/motionsickness.fpi
+
+;End of Script

@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = One video file plays, then teleports the player
+
+;Triggers
+
+:state=0,plrwithinzone=1:state=1,sound=$0,video=videobank/secret.avi,plrmoveifused,stopsound=$0,activateifused=1

@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Moves a third entity to move3
+
+;Triggers
+
+:state=0,activated=1:settargetname=move3,movetotarget

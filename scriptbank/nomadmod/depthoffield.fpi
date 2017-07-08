@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Activate DOF and remove crosshair when aiming
+
+;Triggers
+
+:state=0,plrzoomed:setposteffect=depthoffield,crosshair=0,state=1
+:state=1,plrnotzoomed:setposteffect=nomadmod,crosshair=1,state=0
+:state=2:state=0

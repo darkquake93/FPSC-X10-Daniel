@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = plrbind
+
+;Triggers
+
+:state=0:bindtoplr
+:state=0:setalphafade=100,runfpidefault=1
+
+;End of Script

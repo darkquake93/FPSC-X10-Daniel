@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Compass
+
+;Triggers
+
+;state=0:compassx=10,compassy=10
+:state=0:compasson,compasspin,radaron=1,state=1
+
+;End of Script

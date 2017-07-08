@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Follow Waypoints then run default fpi to destroy (doesn't quite work..)
+
+;Triggers
+
+:waypointstate=0:animate=5,waypointstart
+:waypointstate=3:animate=5,waypointnext
+:waypointstate=5:waypointstop,runfpidefault=2
+
+;End of Script

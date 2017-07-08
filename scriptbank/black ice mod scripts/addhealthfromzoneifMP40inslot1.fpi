@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = weapon in slot.
+
+;Triggers
+
+:state=0,plrwithinzone=1,weaponinslot=ww2\mp40 1:addvar=$PH 1
+

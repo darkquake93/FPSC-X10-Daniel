@@ -1,0 +1,21 @@
+;Flashlight Script
+
+;Header
+
+desc          = Binds flashlight to the F key
+
+;Triggers
+
+:plrcurrentweapon=nomadmod\python:state=0
+:plrcurrentweapon=nomadmod\grenade:state=0
+:plrcurrentweapon=nomadmod\tavor:state=0
+:state=0:state=1
+:state=1,plrcurrentweapon=nomadmod\flashlight:state=2
+:state=2,KeyPressed=33 1:state=3,sound=gamecore\guns\nomadmod\flashlight\onoff.wav
+:state=3,KeyPressed=33 0:state=4
+:state=4:plraction=1,state=4
+:state=4,KeyPressed=33 1:state=5
+:state=5,KeyPressed=33 0:state=6
+:state=6:state=0
+
+;End of Script

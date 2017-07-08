@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Raises water level on the Our House map, by the amount indicated in "effectincwaterlevel"
+
+;Triggers
+
+:plrwithinzone=1:effectincwaterlevel=200
+
+;End of Script

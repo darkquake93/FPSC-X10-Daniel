@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = just makes it a ragdoll
+
+;Triggers
+
+:state=0:state=1,floatrate=1,coloff,ragdoll,runfpi=destroy\bloodandactivatetarget.fpi,suspend
+
+;End of Script

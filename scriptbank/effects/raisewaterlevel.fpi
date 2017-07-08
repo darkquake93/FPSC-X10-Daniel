@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Raise water level
+
+;Triggers
+
+:plrwithinzone=1:effectincwaterlevel=1
+
+;End of Script

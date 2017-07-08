@@ -1,0 +1,15 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Scrolling clouds
+
+:state=0:skyscroll=skybank\skyscroll\clouds.dds
+:state=0:skyspeed=5.0
+
+
+
+
+
+
+;End of Script

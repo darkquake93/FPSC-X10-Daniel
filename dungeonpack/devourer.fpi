@@ -1,0 +1,69 @@
+desc          = Devourer
+;Triggers
+
+;WALKING WAYPOINTS
+
+
+
+:state=0,plrdistwithin=300,plrcanbeseen:state=50,rotatetoplr,sound=audiobank\dungeonpack\devourer_intro.wav
+
+
+:waypointstate=0:animate=2,waypointstart
+:waypointstate=3:animate=2,waypointnext
+:waypointstate=4:animate=2,waypointrandom
+:waypointstate=5:animate=2,waypointreverse
+
+;DETECT PLAYER
+:state=50,plrdistwithin=300:waypointstop,rotatetoplr,setframe=1,state=1
+
+:state=50,plrdistwithin=200:waypointstop,state=3
+:state=1:incframe=1
+:state=1,frameatend=1:sound=sound=audiobank\dungeonpack\banshee_intro.wav,state=50
+:state=1,plrdistfurther=300:waypointstop,rotatetoplr,animate=1,state=50
+:state=1,plrdistwithin=200:waypointstop,animate=2,state=3
+
+
+
+
+
+;Select Attack
+;walk
+
+
+:state=3,plrdistwithin=200:waypointstop,rotatetoplr,animate=3,movefore=1,state=3
+:state=3,plrdistfurther=200:waypointstop,rotatetoplr,animate=1,state=0
+
+
+:state=3,plrdistwithin=60:state=4
+
+
+
+
+
+;Choose attack
+:state=4,plrdistwithin=60,random=2:waypointstop,rotatetoplr,setframe=94,state=5
+:state=4,plrdistwithin=45,random=2:waypointstop,rotatetoplr,setframe=95,state=7
+
+;attack1
+:state=5,framebeyond=94 14,plrdistwithin=60:plraddhealth=-10,sound=audiobank\dungeonpack\devourer_attack.wav,state=6
+:state=5:incframe=94,rotatetoplr
+:state=5,frameatend=94:animate=10,state=50
+
+:state=6:incframe=94,rotatetoplr
+:state=6,frameatend=94:animate=10,state=50 
+:state=6,plrdistfurther=200:waypointstop,rotatetoplr,state=50
+
+
+;attack2
+:state=7,framebeyond=95 14,plrdistwithin=45:plraddhealth=-10,sound=audiobank\dungeonpack\devourer_attack.wav,state=8
+:state=7:incframe=95,rotatetoplr
+:state=7,frameatend=95:animate=10,state=50 
+
+:state=8:incframe=95,rotatetoplr
+:state=8,frameatend=95:animate=10,state=50
+:state=8,plrdistfurther=200:waypointstop,rotatetoplr,state=50
+
+
+
+
+

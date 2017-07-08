@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Set up 'health bar'
+
+;Triggers
+
+:state=0:state=1
+:state=1:hudreset,hudx=50,hudy=90,hudsizex=16,hudsizey=16,hudimage=gamecore\huds\numeric1.dds,hudname=healthbar,hudtype=20

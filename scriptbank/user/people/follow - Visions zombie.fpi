@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = The zombie Follows Waypoints and stops when he's done. Destroys if activated
+
+;Triggers
+
+:waypointstate=0:animate=2,waypointstart
+:waypointstate=3:animate=2,waypointnext
+:waypointstate=4:waypointstate=999,state=0
+:state=0,activated=1:destroy
+
+;End of Script

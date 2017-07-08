@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header By Tax78
+
+desc          = Health - take
+
+;Triggers
+:always:globalvar=Zlargehealth
+
+:state=0,varequal=Zlargehealth 2:state=1,playertake
+
+:state=1,varequal=Zlargehealth 1:etimerstart,state=20
+
+:state=20,etimergreater=500:plraddhealth=100,plrsound=audiobank\items\healthup.wav,state=21
+
+;End of Script

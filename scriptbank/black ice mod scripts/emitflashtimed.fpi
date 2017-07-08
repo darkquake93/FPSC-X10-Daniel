@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = flash emitter every 1.5 secs
+
+;Triggers
+
+
+:state=0:state=1
+:state=1:etimerstart,state=2
+:state=2,flashing=0,etimergreater=1500:emitflash,state=3
+:state=3,flashing=0:etimerstop,state=0

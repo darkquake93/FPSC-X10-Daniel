@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+desc          = When activated, plays a sound. Can be switched off. For some weird reason, using a switch for this makes the activated value become 0. That's why when it's "Activated with 0" it plays the sound.
+
+;Triggers
+
+:plrwithinzone=0:stopsound
+:state=0:activated=0,state=1
+:state=1,plrwithinzone=1,activated=0:sound=$0
+
+;End of Script

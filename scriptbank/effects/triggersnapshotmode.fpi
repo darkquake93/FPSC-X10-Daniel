@@ -1,0 +1,33 @@
+;AIScript from Wizard
+
+;Header
+desc          = Keypress Script
+
+; Setup Level Stats
+:state=0,scancodekeypressed=43:snapshotmode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

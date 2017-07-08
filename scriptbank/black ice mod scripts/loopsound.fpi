@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = loop sound
+
+;Triggers
+
+:state=0:state=1
+:state=1:loopsound=$0
+

@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On
+
+;Triggers
+
+:state=0:setalphafade=100,entitysetimmune=1,state=1
+:state=1:runfpidefault=1:state=2
+
+;End of Script

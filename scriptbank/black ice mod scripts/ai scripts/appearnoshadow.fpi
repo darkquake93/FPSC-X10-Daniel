@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On (no blob shadow for non Dark AI characters)
+
+;Triggers
+
+:state=0:setalphafade=100,hideshadow=1,runfpidefault=1
+
+// use this instead to include head shots
+//:state=0:setalphafade=100,hideshadow=1,headshot=1,headshotdamage=100,runfpidefault=1
+
+;End of Script

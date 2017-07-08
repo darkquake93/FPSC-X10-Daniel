@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = spawn player to start marker with '*' key (debug test game)
+
+
+;Triggers
+
+:state=0:plrrotatey=0,state=1
+:state=1,keypressed=9 1:plrmoveto=PlayerStart,setposteffect=nomadmod,state=2
+:state=2:state=0
+
+;End of Script
+
+

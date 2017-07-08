@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Leave corpse and use shader variable to stop eyes from glowing
+
+;Triggers
+
+:always:selectshadervariable=1
+:state=0:state=1,setshadervariable=0
+:state=1:suspend,coloff
+
+;End of Script

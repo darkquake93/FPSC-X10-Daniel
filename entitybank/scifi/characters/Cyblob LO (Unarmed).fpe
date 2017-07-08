@@ -1,0 +1,151 @@
+;header
+
+desc          = CyBlob
+
+;ai
+aiinit	      = appear1.fpi
+aimain	      = people\darkai.fpi
+aidestroy     = people\darkdestroy.fpi
+aishoot       = 
+soundset      = monster
+
+;group (0-neutral,1-enemy,2-friend)
+alignment     = 1
+
+;darkai (0-no action,1-attack,2-findcover,3-patrol area)
+initmode      = 3
+seemode       = 1
+trigmode      = 1
+hurtmode      = 2
+hurtvalue     = 90
+loadedweapon  = 1
+canstrafe     = 0
+canduck       = 0
+canhear       = 1
+;place also in cone of sight section
+attackrange   = 50
+viewrange     = 500
+maxrange      = 1000
+;place in visualinfo
+texturearray  = 5
+showhealthbar = 1
+;identity details
+speed         = 80
+
+;spawn
+spawnmax      = 0
+spawndelay    = 0
+spawnqty      = 0
+
+;orientation
+model         = cyblob_med.X
+offx          = 0
+offy          = 0
+offz          = 0
+rotx          = 0
+roty          = 0
+rotz          = 0
+scale         = 100
+fixnewy       = 180
+
+;cone of sight
+coneheight    = 53
+coneangle     = 50
+
+;visualinfo
+textured      = cyblob_1_D.tga
+effect        =
+castshadow    = 0
+
+;decals
+decalmax      = 2
+decal0        = red
+decal1        = blood
+
+;identity details
+strength      = 25
+ischaracter   = 1
+hasweapon     = 
+isobjective   = 0
+cantakeweapon = 0
+isflak        = 0
+
+;bodypartslimbinfo (1=head/2=body/3+4=armslr/5+6=legslr)
+limbmax       = 0
+
+
+;New frames for walk: 2500-2539
+;Run:  2553-2572
+;Idle: 2576-2650
+;Intro: 2850-2929  (says BRAINS at frame 2895)
+;Swipe attack: 2654-2720 (impact occurs at frame 2678)  
+;Grab attack: 2724-2773  (impact occurs at frame 2748)
+;Grab and bite attack: 2777-2846 (impact and attaches to player at frame 2801, bite occurs at frame 2828, let's go of player at frame 2837)
+;Bite loop: 2816-2836 (bite occurs at frame 2828 as above)
+
+;animationinfo
+animmax       = 100
+anim0         = 2850,2929
+anim1         = 2576,2650
+anim2         = 2500,2539
+anim3         = 260,279
+anim4         = 280,299
+anim5         = 2553,2572
+anim6         = 319,355
+anim7         = 160,189
+anim8         = 330,355
+anim11        = 0,19
+anim12        = 20,39
+anim13        = 493,522
+anim14        = 40,59
+anim15        = 60,79
+anim16        = 523,552
+anim17        = 120,139
+anim18        = 140,159
+anim20        = 80,99
+anim21        = 100,119
+anim31        = 356,380
+anim32        = 381,405
+anim33        = 381,405
+anim34        = 381,405
+anim35        = 381,405
+anim36        = 406,442
+anim40        = 443,462
+anim41        = 463,492
+anim50        = 553,572
+anim51        = 573,597
+anim52        = 598,622
+anim53        = 623,642
+anim54        = 643,662
+anim55        = 663,681
+anim56        = 682,731
+anim57        = 160,189
+anim61        = 0,19
+anim62        = 20,39
+anim63        = 822,911
+anim64        = 40,59
+anim65        = 60,79
+anim66        = 912,941
+anim67        = 120,139
+anim68        = 140,159
+anim70        = 80,99
+anim71        = 100,119
+anim81        = 732,756
+anim82        = 757,781
+anim83        = 757,781
+anim84        = 757,781
+anim85        = 757,781
+anim86        = 782,831
+anim90        = 832,851
+anim91        = 852,881
+
+;animationspeedinfo
+animspeed0    = 500
+animspeed1    = 500
+animspeed2    = 200
+animspeed3    = 500
+animspeed4    = 500
+animspeed5    = 500
+animspeed6    = 500
+animspeed7    = 500
+animspeed8    = 500

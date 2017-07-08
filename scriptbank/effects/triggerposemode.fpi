@@ -1,0 +1,7 @@
+;AIScript from Wizard
+
+;Header
+desc          = Entity uses pose mode, no AI, just [ and ] for frame control
+
+; Setup Level Stats
+:state=0:posemode

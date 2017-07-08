@@ -1,0 +1,16 @@
+;Health Regeneration Script
+
+;Header
+
+desc          = Regenerates player health when hurt
+
+;Triggers
+
+:state=0,plrhealthless=500:state=1,timerstart
+:state=1,timergreater=1000:plraddhealth=5,state=2
+:state=2,plrhealthgreater=500:plrsethealth=500,state=0
+:state=2:state=0
+
+;End of Script
+
+

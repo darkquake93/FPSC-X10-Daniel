@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Destroys itself when player gets close
+
+;Triggers
+
+:state=0,plrdistwithin=60:state=1,destroy
+
+;End of Script

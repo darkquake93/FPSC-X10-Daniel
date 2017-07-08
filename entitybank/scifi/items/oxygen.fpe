@@ -1,0 +1,31 @@
+
+;header
+desc          = oxygen
+
+;ai
+aiinit	      = appear1.fpi
+aimain	      = pickupoxygen.fpi
+aidestroy     = disappear1.fpi
+
+;spawn
+spawnmax      = 1
+spawndelay    = 500
+spawnqty      = 1
+
+;Itemproperties
+defaultstatic = 0
+materialindex = 3
+collisionmode = 0
+debrisshape   = 0
+explodable    = 0
+isimmobile    = 1
+
+;Orientation
+model         = oxygen.X
+offy          = 0
+scale         = 100
+fixnewy       = 0
+
+;visualinfo
+textured      = oxygen_D.tga
+transparency  = 2

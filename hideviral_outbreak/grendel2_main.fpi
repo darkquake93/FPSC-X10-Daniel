@@ -1,0 +1,74 @@
+desc          = Random Melee Attack 
+
+;Triggers
+
+
+:healthless=150:state=15,suspend,coloff,ragdoll,sound=audiobank\viral_outbreak\grendel_die.wav,selectshadervariable=1,setshadervariable=0
+
+;LAY IDLE AND DETECT PLAYER WHEN CLOSE
+:state=0,plrdistfurther=75:animate=98,selectshadervariable=1,setshadervariable=100
+;MAKE INVINCIBLE WHILE OUT OF ATTACK RANGE SO PLAYER CAN'T TAKE CHEAP SHOTS
+:state=0,plrdistfurther=75,shotdamage=1:sethealth=200,animate=98
+:state=0,plrdistwithin=75,plrcanbeseen:setframe=99,state=20,sound=audiobank\viral_outbreak\grendel_awaken.wav,selectshadervariable=1,setshadervariable=100
+
+;GET UP
+:state=20:incframe=99
+:state=20,frameatend=99:state=5
+
+
+
+;CHOOSE MELEE ATTACK ROUTINE
+:state=5,random=6:state=1
+:state=5,random=6:state=6
+:state=5,random=6:state=12
+
+
+
+;MELEE ATTACK 1 (OVERHEAD ATTACK/WALKING)
+:state=1,plrdistfurther=70:rotatetoplr,movefore=10,animate=93
+:state=1,plrdistwithin=70:rotatetoplr,setframe=95,state=7
+
+:state=7,framebeyond=95 60,plrdistwithin=95:plraddhealth=-5,sound=audiobank\viral_outbreak\jaws_bite.wav,state=8
+:state=7:incframe=95,rotatetoplr
+:state=7,frameatend=95:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+:state=8,framebeyond=95 60,plrdistwithin=60:plraddhealth=-2,sound=audiobank\misc\melee.wav,state=9
+:state=8:incframe=95
+:state=8,frameatend=95:state=5
+
+:state=9:incframe=95
+:state=9,frameatend=95:state=5
+
+
+
+;MELEE ATTACK 2 (SINGLE SLASH/RUNNING)
+:state=6,plrdistfurther=70:rotatetoplr,runfore=10,animate=94
+:state=6,plrdistwithin=70:rotatetoplr,setframe=96,state=2
+
+:state=2,framebeyond=96 50,plrdistwithin=80:plraddhealth=-5,sound=audiobank\viral_outbreak\jaws_bite.wav,state=3
+:state=2:incframe=96,rotatetoplr
+:state=2,frameatend=96:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+:state=3:incframe=96
+:state=3,frameatend=96:state=5
+
+
+;RAGE ANIMATION/WALK CYCLE
+:state=12,plrdistfurther=65:rotatetoplr,runfore=10,animate=94
+:state=12,plrdistwithin=65:rotatetoplr,setframe=97,state=78
+
+:state=78,framebeyond=97 20,plrdistwithin=160:sound=audiobank\viral_outbreak\grendel_rage.wav,state=89
+:state=78:incframe=97,rotatetoplr
+:state=78,frameatend=97:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+:state=89:incframe=97
+:state=89,frameatend=97:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+
+
+
+
+
+
+
+
+

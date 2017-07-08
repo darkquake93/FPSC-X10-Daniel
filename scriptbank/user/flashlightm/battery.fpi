@@ -1,0 +1,30 @@
+;Artificial Intelligence Script
+
+
+;Flahlight script
+
+;Header
+
+
+
+desc = Battery (Flashlight)
+
+;use this script in the main event for the flashlight_battery entity
+
+
+;Triggers
+
+
+:state=0:hudreset,hudx=50,hudy=20,hudsize=18,hudtext=Press 'Enter' to install flashlight battery,hudname=batt_pick,hudhide=1,hudmake=display
+:state=0:state=1
+
+:state=1:rundecal=5
+:state=1,plrdistwithin=40:hudshow=batt_pick,hudfadeout=batt_pick
+:state=1,plrdistwithin=40,plrusingaction=1:state=2,playertake,coloff,hudunshow=batt_pick
+
+:state=2:settargetname=flashlight_source,settarget,activatetarget=2
+
+
+
+
+;End of Script

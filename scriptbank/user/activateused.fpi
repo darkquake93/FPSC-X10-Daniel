@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Just activates entity specified in IF USED and plays the sound
+
+;Triggers
+
+:state=0:activateifused=1,sound=$0

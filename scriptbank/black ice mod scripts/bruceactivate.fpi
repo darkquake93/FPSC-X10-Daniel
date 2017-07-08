@@ -1,0 +1,8 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = bruce active script
+
+:state=0:state=10
+:state=10,plrdistwithin=40,plrusingaction=1:state=1,activateifused=1,coloff

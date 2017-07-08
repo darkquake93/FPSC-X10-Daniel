@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Character stands still on the spot, does not look around
+
+;Triggers
+
+:state=0:state=0
+
+;End of Script

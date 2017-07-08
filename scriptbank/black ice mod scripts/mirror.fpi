@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Mirror (realtime reflection)
+
+;Triggers
+
+:state=0:setsyncrate=140,reflection=1
+
+;End of Script

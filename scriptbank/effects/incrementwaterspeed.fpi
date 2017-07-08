@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Water Control
+
+;Triggers
+
+:plrwithinzone=1,effectwaterspeedless=100:effectincwaterspeed=1
+
+;End of Script

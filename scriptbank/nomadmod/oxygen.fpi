@@ -1,0 +1,17 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Pickup Item (Oxygen)
+
+;Triggers
+:always:globalvar=watersystem
+
+:state=0:hudreset,hudx=50,hudy=90,hudimagefine=gamecore\text\pickedupanitem.tga,hudname=itemprompt,hudhide=1,hudmake=display,state=5
+:state=5,varequal=watersystem 0:state=10
+:state=5,vargreater=watersystem 0:state=10
+:state=10,plrdistwithin=40:state=1,subvar=watersystem 20,playertake,coloff,plrsound=audiobank\misc\oxygen.wav,hudshow=itemprompt,hudfadeout=itemprompt
+;:state=10,varless=watersystem 0:state=5
+:state=1:rundecal=5
+
+;End of Script

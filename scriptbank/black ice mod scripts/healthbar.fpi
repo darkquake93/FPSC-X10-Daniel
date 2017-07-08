@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Set up 'health bar'
+
+;Triggers
+
+:state=0:state=1
+:state=1:hudreset,hudx=5,hudy=9,hudsizex=16,hudsizey=16,hudimage=healthline.png,hudname=healthbar,hudtype=20,hudmake=numeric

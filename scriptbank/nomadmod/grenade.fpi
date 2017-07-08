@@ -1,0 +1,19 @@
+;Grenade Script
+
+;Header
+
+desc          = Binds grenade to the G key
+
+;Triggers
+
+:plrcurrentweapon=nomadmod\python:state=0
+:plrcurrentweapon=nomadmod\flashlight:state=0
+:plrcurrentweapon=nomadmod\tavor:state=0
+:state=0:state=1
+:state=1,plrcurrentweapon=nomadmod\grenade:state=2
+:state=2,KeyPressed=34 1:state=4,sound=gamecore\guns\nomadmod\grenade\pullthrow.wav
+:state=3,KeyPressed=34 0:state=5
+:state=4:plraction=1,state=5
+:state=5:state=0
+
+;End of Script

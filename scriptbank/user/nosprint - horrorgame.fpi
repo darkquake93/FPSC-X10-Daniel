@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Disables sprinting for the player
+
+;Triggers
+
+:state=0:state=1
+:state=1:plrsprint=0
+
+;End of Script

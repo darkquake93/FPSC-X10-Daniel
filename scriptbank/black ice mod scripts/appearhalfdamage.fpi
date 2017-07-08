@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On, appear double damage
+
+;Triggers
+
+:state=0:setalphafade=100,entitydamagemult=50,runfpidefault=1
+:state=0:state=1
+
+;End of Script

@@ -1,0 +1,14 @@
+]
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Check for ammo damage. If 556nato add health, if 40mm instant kill
+
+;Triggers
+
+:state=0:state=1
+:state=1:etimerstart,state=2
+:state=2,etimergreater=10000:state=3
+:statelesser=3:addhealth=1
+:always:debugvar=$EH

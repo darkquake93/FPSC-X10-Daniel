@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = move if near
+;Triggers
+
+:state=0:state=1
+:state=1,plrdistwithin=100:setvar=$EPZ $CPZ
+
+
+;End of Script

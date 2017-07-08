@@ -1,0 +1,11 @@
+;Ragdoll Script
+
+;Header
+
+desc          = Ragdoll then stay
+
+;Triggers
+
+:state=0:state=1,suspend,coloff,ragdoll
+
+;End of Script

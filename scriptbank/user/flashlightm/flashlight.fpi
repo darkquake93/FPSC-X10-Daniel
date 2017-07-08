@@ -1,0 +1,111 @@
+;Artificial Intelligence Script
+
+
+;Flahlight script
+
+;Header
+
+;Original / Inspired by s4real fog edit by game freak16 and edited by:(SEF)DEATH
+
+desc = Flashlight
+
+;use this script in the main event for the flashlight_source entity (dynamic light, 0 radius)
+
+
+
+
+
+
+;picking up the flashlight
+
+:state=0,activated=1:localvar=1,setvar=10,state=3
+
+
+
+;Setup Battery life huds
+
+:state=3:hudreset,hudx=50,hudy=50,hudimagefine=gamecore\flashlightm\flash.dds,hudname=flash_beam,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=6,hudy=91,hudimagefine=gamecore\flashlightm\battery32.png,hudname=battery_img,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=100%,hudname=flash_100,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=90%,hudname=flash_90,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=80%,hudname=flash_80,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=70%,hudname=flash_70,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=60%,hudname=flash_60,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=50%,hudname=flash_50,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=40%,hudname=flash_40,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=30%,hudname=flash_30,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=20%,hudname=flash_20,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=10%,hudname=flash_10,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudtext=0%,hudname=flash_0,hudhide=1,hudmake=display
+:state=3:hudreset,hudx=10,hudy=90,hudsize=20,hudtext=Battery 0%,hudname=deadbatt,hudhide=1,hudmake=display
+
+:state=3:state=4
+
+
+
+;turn on flashlight
+
+:state=4,scancodekeypressed=33,vargreater=0:hudshow=flash_beam,sound=audiobank\items\flashlight.ogg,ambience=50,timerstart,state=5
+:state=4,scancodekeypressed=33,varless=1:hudshow=deadbatt,hudfadeout=deadbatt
+
+
+:state=5,scancodekeypressed=0:state=6
+
+
+
+;monitor timer to subtract from batter life
+
+:state=6,timergreater=30000,vargreater=0:decvar=1,timerstart
+
+
+
+;timers to monitor battery life, reduce light as battery gets low
+
+:state=6:hudshow=battery_img
+:state=6,varequal=10:hudshow=flash_100
+:state=6,varequal=9:hudunshow=flash_100,hudshow=flash_90
+:state=6,varequal=8:hudunshow=flash_90,hudshow=flash_80
+:state=6,varequal=7:hudunshow=flash_80,hudshow=flash_70
+:state=6,varequal=6:hudunshow=flash_70,hudshow=flash_60
+:state=6,varequal=5:hudunshow=flash_60,hudshow=flash_50,ambience=45
+:state=6,varequal=4:hudunshow=flash_50,hudshow=flash_40,ambience=40
+:state=6,varequal=3:hudunshow=flash_40,hudshow=flash_30,ambience=30
+:state=6,varequal=2:hudunshow=flash_30,hudshow=flash_20,ambience=20
+:state=6,varequal=1:hudunshow=flash_20,hudshow=flash_10,ambience=10
+:state=6,varequal=0:hudunshow=flash_10,hudshow=flash_0,hudfadeout=flash_0
+:state=6,varequal=0:hudunshow=flash_beam,sound=audiobank\items\flashlight.ogg,ambience=0,state=7
+
+
+;check to see if flashlight is turned off
+
+
+:state=6,scancodekeypressed=33:hudunshow=flash_beam,sound=audiobank\items\flashlight.ogg,ambience=0,state=7
+
+
+:state=7:hudunshow=battery_img,hudunshow=flash_100,hudunshow=flash_90,hudunshow=flash_80,hudunshow=flash_70,hudunshow=flash_60,hudunshow=flash_50,hudunshow=flash_40,hudunshow=flash_30,hudunshow=flash_20,hudunshow=flash_10,hudunshow=flash_0
+
+:state=7,scancodekeypressed=0:state=4
+
+
+;battery recharge
+:activated=2:hudreset,hudx=50,hudy=50,hudsize=18,hudtext=Installing new flashlight battery...,hudname=changebatt,hudhide=1,hudmake=display
+:activated=2,state=6:state=10
+:state=10:hudunshow=flash_beam,sound=audiobank\items\flashlight.ogg,ambience=0,state=11
+:state=11:hudunshow=battery_img,hudunshow=flash_100,hudunshow=flash_90,hudunshow=flash_80,hudunshow=flash_70,hudunshow=flash_60,hudunshow=flash_50,hudunshow=flash_40,hudunshow=flash_30,hudunshow=flash_20,hudunshow=flash_10,hudunshow=flash_0,state=12
+:state=12:timerstart,state=13
+
+:state=13,timergreater=1000:hudshow=changebatt,plrsound=audiobank\items\pickup.wav,activate=1,setvar=10,state=14
+:state=14,timergreater=3000:hudunshow=changebatt,sound=audiobank\items\flashlight.ogg,hudshow=flash_beam,ambience=50,state=5,timerstart,state=6
+
+;battery used, flashlight off
+:activated=2,state=4:state=15
+:state=15:hudshow=changebatt,hudfadeout=changebatt,plrsound=audiobank\items\pickup.wav,activate=1,setvar=10,state=4
+
+
+
+
+;End of Script
+
+
+
+

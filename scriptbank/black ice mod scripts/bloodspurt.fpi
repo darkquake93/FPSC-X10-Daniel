@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = bloodspurt
+
+;Triggers
+
+:state=0:dimvar=loops,state=1
+:state=1,vargreater=loops 10:state=10
+:state=1:etimerstart,state=2
+:state=2:bloodsplash=200 90,state=4
+:state=4,etimergreater=100:emitforce=0.5,incvar=loops 1,state=1
+:state=10:destroy
+
+

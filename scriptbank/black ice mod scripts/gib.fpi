@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Default Entity Behaviour (Nothing)
+
+;Triggers
+
+:state=0:state=1
+:state=1,velocitygreater=5:bloodsplash=20
+
+;End of Script

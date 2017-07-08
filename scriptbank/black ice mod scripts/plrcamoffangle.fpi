@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On
+
+;Triggers
+
+:state=0:plroffsetanglex=90,state=1
+
+
+;End of Script

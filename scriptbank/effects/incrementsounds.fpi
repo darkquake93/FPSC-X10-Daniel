@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Sound Control
+
+;Triggers
+
+:plrwithinzone=1,volumeingamesoundsless=100:volumeincingamesounds=1
+:plrwithinzone=1,volumeplayersoundsless=100:volumeincplayersounds=1
+
+;End of Script

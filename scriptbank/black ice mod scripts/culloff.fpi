@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = culling off
+
+;Triggers
+
+:state=0:plrwithinzone=1,cullmode=0,state=1
+
+;End of Script

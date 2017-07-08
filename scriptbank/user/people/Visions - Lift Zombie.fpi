@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Spawn zombie in lift, rotate to player
+
+;Triggers
+
+:state=0:rotatetoplr,animate=1

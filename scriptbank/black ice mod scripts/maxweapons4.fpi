@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = maxweapons
+
+;Triggers
+
+:state=0:setmaxweapons=4,state=1
+
+;End of Script

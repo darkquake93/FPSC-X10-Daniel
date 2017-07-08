@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Trigger HUD (triggerzone)
+
+;Triggers
+
+:state=0:hudreset,hudx=50,hudy=50,hudimagefine=gamecore\text\inventory.png,hudname=dualwield,hudhide=1,hudmake=display,state=1
+:state=1,plrwithinzone=1:coloff,hudshow=dualwield,sound=$0,timerstart,state=2
+:state=2,timergreater=5000:hudfadeout=dualwield,suspend
+
+;End of Script
+

@@ -1,0 +1,26 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = flashlight
+
+;Triggers
+
+
+:state=0:state=10
+
+:state=10,keypressed=33 1:etimerstart,state=11
+:state=11,etimergreater=500:etimerstop,flashlight=1,state=12
+:state=12,keypressed=33 1:etimerstart,state=13
+:state=13,etimergreater=500:etimerstop,flashlight=0,state=10
+
+
+
+
+
+
+
+
+
+
+

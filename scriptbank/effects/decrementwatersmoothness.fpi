@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Water Control
+
+;Triggers
+
+:plrwithinzone=1,effectwatersmoothgreater=0:effectdecwatersmooth=1
+
+;End of Script

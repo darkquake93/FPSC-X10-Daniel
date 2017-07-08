@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc = Show message to sprint
+;Triggers
+ 
+:state=0:hudreset,hudx=50,hudy=87,hudimagefine=gamecore\text\user\horror\holdshift.png,hudname=holdshift,hudhide=1,hudmake=display,state=1
+
+:plrdistwithin=50:hudshow=holdshift,hudfadeout=holdshift
+
+:state=1,plrwithinzone=1:hudshow=holdshift,state=2 
+
+:state=2,plrwithinzone=0:hudfadeout=holdshift,state=1
+
+;End of Script

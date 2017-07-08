@@ -1,0 +1,16 @@
+;Flashlight Script
+
+;Header
+
+desc          = Triggers hand torch when selected 
+
+;Triggers
+
+:state=0:state=1
+:state=1,plrcurrentweapon=nomadmod\handtorch:state=2
+:state=2:plraction=1,loopsound=audiobank\atmos\firehum.wav
+:state=2,KeyPressed=11 1:state=3
+:state=3,KeyPressed=11 0:state=4,stopsound
+:state=4:state=0
+
+;End of Script

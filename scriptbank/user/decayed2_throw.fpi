@@ -1,0 +1,24 @@
+desc          = "Throws" when activated
+
+;Triggers
+
+
+:healthless=150:state=15,suspend,coloff,ragdoll,sound=audiobank\viral_outbreak\jaws_rage.wav
+
+;MOVE TO MOVE3 - DANIEL
+
+:state=0,activated=1:settargetname=move3,movetotarget,timerstart,state=1
+:state=1,timergreater=600:settargetname=blood1,activatetarget=1,state=2
+:state=2,timergreater=800:settargetname=blood2,activatetarget=1,state=3
+:state=3,timergreater=1000:settargetname=blood3,activatetarget=1,state=4
+:state=4,timergreater=1200:settargetname=blood4,activatetarget=1,state=5
+:state=5,timergreater=1300:freeze
+
+;LAY IDLE AND DETECT PLAYER WHEN CLOSE
+:state=0,plrdistfurther=75:animate=98
+
+;MOVE TO WAYPOINT WHEN ACTIVATED IF THERE IS ONE - DANIEL
+
+:waypointstate=0,activated=1:animate=5,waypointstart
+:waypointstate=3:animate=5,waypointnext
+:waypointstate=5:waypointstop

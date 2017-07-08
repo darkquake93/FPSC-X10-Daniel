@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Die Harpie
+
+;Triggers
+
+:state=0:state=2
+:state=2,alphafadeequal=100:decalphafade=0
+:state=2,alphafadeequal=0:state=3,destroy
+
+;End of Script:

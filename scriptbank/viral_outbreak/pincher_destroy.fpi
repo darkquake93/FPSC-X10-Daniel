@@ -1,0 +1,15 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Leave corpse and use shader variable to stop eyes from glowing
+
+;Triggers
+
+
+;state=0:state=1,setframe=95
+;state=1:suspend,coloff,ragdoll
+
+:state=0:suspend,coloff,ragdoll,sound=audiobank\viral_outbreak\pincher_destroy.wav,selectshadervariable=2,setshadervariable=0,state=1
+
+;End of Script

@@ -1,0 +1,26 @@
+;Artificial Intelligence Script
+ 
+;Header
+ 
+desc          = Auto-Save and Display Text. 
+ 
+;Triggers
+ 
+;Setup Text
+ 
+:state=0:hudreset,hudx=50,hudy=50,hudimage=languagebank\english\gamecore\backdrops\basic\saving.tga,hudname=autosave,hudhide=1,hudmake=display
+:state=0:state=1
+ 
+;Activation
+ 
+:state=1,plrwithinzone=1:etimerstart,hudshow=autosave,sound=$0,state=2
+ 
+;Display and Remove
+ 
+:state=2,etimergreater=1000:hudunshow=autosave,destroy,quicksavegame,activateifused=1,state=3
+:state=3:none
+ 
+;End of Script
+
+
+

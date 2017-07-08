@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = show pointer
+;Triggers
+
+:state=0:startmenu,hudshow=pointer
+

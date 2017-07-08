@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Just rotate to the player
+
+;Triggers
+
+:state=0:state=1
+:state=1:rotatetoplr
+
+;End of Script

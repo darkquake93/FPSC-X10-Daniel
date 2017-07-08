@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = entity camera
+
+;Triggers
+
+
+:state=0:entrotatez=90
+:state=0:spinrate=3
+:always:entitycam

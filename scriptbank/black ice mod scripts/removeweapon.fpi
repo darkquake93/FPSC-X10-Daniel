@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone remove autoslug
+
+;Triggers
+
+
+:state=0:state=1
+:state=1,plrwithinzone=1:state=2
+:state=2:removeplrweapon=scifi\autoslug,state=3
+
+

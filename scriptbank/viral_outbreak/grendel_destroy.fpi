@@ -1,0 +1,15 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Leave corpse and use shader variable to stop eyes from glowing
+
+;Triggers
+
+
+;state=0:state=1
+;state=1:suspend,coloff
+
+:state=0:suspend,coloff,ragdoll,selectshadervariable=1,sound=audiobank\viral_outbreak\jaws_rage.wav,setshadervariable=0,state=1
+
+;End of Script

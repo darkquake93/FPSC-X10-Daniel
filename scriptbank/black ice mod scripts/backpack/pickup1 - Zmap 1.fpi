@@ -1,0 +1,29 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Pickup Item
+
+;Triggers
+:state=0:globalvar=Zmap
+
+:state=0:hudreset,hudx=50,hudy=90,hudimagefine=gamecore\text\pickedupanitem.tga,hudname=itemprompt,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=50,hudy=50,hudimage=gamecore\huds\backpack\map.dds,hudname=map,hudhide=1,hudmake=display
+:state=0:state=10
+
+:state=10,plrdistwithin=40:state=11,addvar=Zmap 1,playertake,coloff,plrsound=audiobank\misc\ping.wav,hudshow=itemprompt,hudfadeout=itemprompt
+:state=10,varequal=Zmap 1:state=11,playertake,coloff
+
+:state=11,varequal=Zmap 2:hudshow=map,etimerstart,setvar=Zmap 0,state=12
+:state=11,varequal=Zmap 0:etimerstart,state=20
+
+:state=12,etimergreater=500:state=13
+
+;"M" exit (Map)
+:state=13,keypressed=50 1:hudunshow=map,addvar=Zmap 1,state=14
+:state=14,keypressed=50 0:state=11
+
+:state=20,etimergreater=500:plrsound=$1,playerdrop
+:state=21,plrdistfurther=45:state=10
+
+;End of Script

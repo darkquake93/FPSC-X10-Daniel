@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Sets Ambience to level
+
+;Triggers
+
+:plrwithinzone=1,ambience=17
+
+;End of Script

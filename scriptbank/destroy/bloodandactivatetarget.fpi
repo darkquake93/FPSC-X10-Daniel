@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Decal Blood Squelch Kind-of sound and activates targetname
+
+;Triggers
+
+:state=0:timerstart,sound=audiobank\materials\5liquidA1.wav,rundecal=0,state=1
+:state=1,timergreater=2000:settargetname=soul2,activatetarget=1
+
+;End of Script

@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = swap character weapon
+
+;Triggers
+
+
+:state=0,plrdistfurther=500:swapcharacterweap=ww2\mp40
+:state=0,plrdistwithin=500,swapcharacterweap=ww2\colt45
+
+
+;End of Script

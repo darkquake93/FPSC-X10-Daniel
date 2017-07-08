@@ -1,0 +1,23 @@
+;Artificial Intelligence Script 
+; by Daniel Carnovale 
+
+;INSTRUCTIONS 
+
+;Header 
+
+desc = Switch Activate (enter pass code) 
+
+;Triggers 
+
+:state=0:hudreset,hudx=50,hudy=90,hudimagefine=gamecore\text\user\other\pressentertoinput.tga,hudname=useswitchprompt,hudhide=1,hudmake=display,state=10 
+:plrdistwithin=50:hudshow=useswitchprompt,hudfadeout=useswitchprompt 
+:state=10,plrdistwithin=50,scancodekeypressed=79:state=11,sound=audiobank\switches\press.wav 
+:state=11,plrdistwithin=50,scancodekeypressed=80:state=12,sound=audiobank\switches\press.wav 
+:state=12,plrdistwithin=50,scancodekeypressed=81:state=13,sound=audiobank\switches\press.wav 
+:state=13,plrdistwithin=50,scancodekeypressed=75:state=14,sound=audiobank\switches\press.wav
+:state=14:state=1,plrsound=$0,activateifused=1,alttexture=1 
+:state=1,plrusingaction=0:state=2 
+:state=2,plrdistwithin=50,plrusingaction=1:state=3,plrsound=$1,activateifused=0,alttexture=0 
+:state=3,plrusingaction=0:state=10 
+
+;End of Script

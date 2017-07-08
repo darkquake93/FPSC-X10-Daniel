@@ -1,0 +1,8 @@
+;Header  desc=Kill the boss, win the level
+ 
+;triggers
+ 
+:state=0:state=1,destroy,coloff
+:state=1:plrmoveto=mainend
+ 
+;End script

@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+ 
+;Header
+
+desc=sets the fog range
+
+;Triggers
+ 
+:state=0,plrwithinzone=1:fog=0
+;End of Script

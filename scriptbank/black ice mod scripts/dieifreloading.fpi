@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = reload kill.
+
+;Triggers
+
+:state=0:state=1
+:state=1,plrisusingreload:addhealth=-10000,state=1
+
+;End of Script

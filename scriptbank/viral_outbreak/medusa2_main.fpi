@@ -1,0 +1,59 @@
+desc          = Random Melee Attack 
+
+;Triggers
+
+
+
+
+;STAND IDLE, INITIALIZE SHADER VARIABLES, AND DETECT PLAYER WHEN CLOSE
+:state=0:selectshadervariable=1,setshadervariable=200
+:state=0:selectshadervariable=3,setshadervariable=100
+:state=0:selectshadervariable=2,setshadervariable=200
+:state=0,plrdistfurther=300:animate=1
+;MAKE INVINCIBLE WHILE OUT OF ATTACK RANGE SO PLAYER CAN'T TAKE CHEAP SHOTS
+:state=0,plrdistfurther=300,shotdamage=1:sethealth=200,animate=1
+:state=0,plrdistwithin=300:state=1,sound=audiobank\viral_outbreak\grendel_awaken.wav
+
+
+
+
+
+;MELEE ATTACK 1 (OVERHEAD ATTACK)
+:state=1,plrdistfurther=100:rotatetoplr,movefore=10,animate=2,loopsound=audiobank\viral_outbreak\slithering_loop.wav
+:state=1,plrdistwithin=100:rotatetoplr,setframe=23,state=7,stopsound,sound=audiobank\viral_outbreak\slithering_loop.wav
+
+:state=7,framebeyond=23 60,plrdistwithin=150:plraddhealth=-5,sound=audiobank\viral_outbreak\jaws_bite.wav,state=8
+:state=7,framebeyond=23 60:sound=audiobank\viral_outbreak\jaws_bite.wav,state=8
+:state=7:incframe=23,rotatetoplr
+;state=7,frameatend=23,state=6,sound=audiobank\viral_outbreak\jaws_intro.wav
+:state=7,frameatend=23:state=6,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+:state=8:incframe=23
+:state=8,frameatend=23:state=6
+
+
+
+
+;MELEE ATTACK 2 (SWIPE)
+:state=6,plrdistfurther=100:rotatetoplr,movefore=10,animate=5,loopsound=audiobank\viral_outbreak\slithering_loop.wav
+:state=6,plrdistwithin=100:rotatetoplr,setframe=24,state=2,stopsound,sound=audiobank\viral_outbreak\slithering_loop.wav
+
+:state=2,framebeyond=24 50,plrdistwithin=150:plraddhealth=-5,sound=audiobank\viral_outbreak\jaws_bite.wav,state=3
+:state=2:incframe=24,rotatetoplr
+:state=2,frameatend=24:state=1,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+:state=3:incframe=24
+:state=3,frameatend=24:state=1
+
+
+
+
+
+
+
+
+
+
+
+
+

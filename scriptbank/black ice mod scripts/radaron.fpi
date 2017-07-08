@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = radaron
+
+;Triggers
+
+:state=0:radaron=1,state=1
+
+;End of Script

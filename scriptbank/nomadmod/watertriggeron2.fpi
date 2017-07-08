@@ -1,0 +1,15 @@
+;Water Script
+
+;Header
+
+desc          = Trigger water on
+
+;Triggers
+:state=0,plrwithinzone=1:state=1
+:state=1:water=1,waterfogdist=750,waterred=210,watergreen=230,waterheightofzone=0,waterspeed=25,waterheight=485,waterreflection=0,state=3
+
+:state=3,plrwithinzone=1:state=4
+:state=3,plrwithinzone=0:state=0
+
+:state=4:state=3
+

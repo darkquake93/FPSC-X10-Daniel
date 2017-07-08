@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Decal Bottle Smash
+
+;Triggers
+
+:state=0:rundecal=0,state=1
+:state=1:destroy
+
+;End of Script

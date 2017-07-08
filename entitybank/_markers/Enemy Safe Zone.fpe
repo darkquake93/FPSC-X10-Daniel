@@ -1,0 +1,12 @@
+;Entity Spec
+
+;Header
+desc          = Enemy Safe Zone
+
+;Orientation
+model         = arrow.X
+textured      = arrowblue_D.tga
+scale         = 100
+fixnewy       = 270
+ismarker      = 1
+forwardfacing = 2

@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On
+
+;Triggers
+
+:state=0:uselightnumber=500
+:state=0:setlighttoentityrot
+:state=0:movelighton
+:state=0:movelighttoentity
+
+;End of Script

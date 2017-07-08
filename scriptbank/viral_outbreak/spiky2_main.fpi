@@ -1,0 +1,60 @@
+desc          = Random Melee Attack 
+
+;Triggers
+
+;SETUP THE SHADER VARIABLE (CONTROLS GLOWING EYES)
+;REME
+:state=0,plrdistfurther=75:selectshadervariable=1,setshadervariable=0,animate=98
+;MAKE INVINCIBLE WHILE OUT OF ATTACK RANGE SO PLAYER CAN'T TAKE CHEAP SHOTS
+:state=0,plrdistfurther=75,shotdamage=1:sethealth=100,animate=98
+:state=0,plrdistwithin=75,plrcanbeseen:selectshadervariable=1,setshadervariable=100,state=20,setframe=99,sound=audiobank\viral_outbreak\jaws_awaken.wav
+
+
+:state=20:incframe=99
+:state=20,frameatend=99:state=5
+
+
+
+;CHOOSE MELEE ATTACK ROUTINE
+:state=5,random=6:state=1
+
+:state=5,random=6:state=12
+
+
+
+;MELEE ATTACK 1 (QUICK SPIKE ATTACK/WALKING)
+:state=1,plrdistfurther=60:rotatetoplr,movefore=10,animate=93
+:state=1,plrdistwithin=60:rotatetoplr,setframe=100,state=7,sound=audiobank\viral_outbreak\spiky_blades.wav
+
+:state=7,framebeyond=100 20,plrdistwithin=70:plraddhealth=-20,plrfreeze=1,state=8
+:state=7:incframe=100,rotatetoplr
+:state=7,frameatend=100:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+:state=8:plrfreeze=1,incframe=100
+:state=8,framebeyond=100 62:plrfreeze=0
+:state=8,frameatend=100:state=5
+
+
+
+
+;RAGE ANIMATION WITH SPIKES/WALK CYCLE
+:state=12,plrdistfurther=60:rotatetoplr,movefore=10,animate=93
+:state=12,plrdistwithin=60:rotatetoplr,setframe=97,state=78,sound=audiobank\viral_outbreak\spiky_blades2.wav
+
+:state=78,framebeyond=97 50,plrdistwithin=70:plraddhealth=-20,plrfreeze=1,state=89
+:state=78:incframe=97,rotatetoplr
+:state=78,frameatend=97:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+:state=89:plrfreeze=1,incframe=97
+:state=89,framebeyond=97 90:plrfreeze=0
+:state=89,frameatend=97:state=5,sound=audiobank\viral_outbreak\jaws_intro.wav
+
+
+
+
+
+
+
+
+
+

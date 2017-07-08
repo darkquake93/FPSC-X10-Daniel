@@ -1,0 +1,25 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Bot AI follow waypoints
+
+;Triggers
+
+:waypointstate=0:animate=2,waypointstart
+:waypointstate=3:animate=2,waypointnext
+:waypointstate=4:animate=2,waypointrandom
+:waypointstate=5:animate=2,waypointreverse
+:nearactivatable=0:settarget,activatetarget=2,animate=2,state=0
+;noiseheard=5:waypointstop,settarget,rotatetotarget,state=0
+:shotdamage=1:bloodsplash=50,settarget,rotatetotarget,state=2
+
+:state=0:state=1
+:state=1,random=20:rotateheadrandom=45
+:state=1,plrcanbeseen,plrdistwithin=250:settarget,state=2
+:state=1,losetarget=10:waypointstate=3:animate=2,waypointnext
+
+:state=2:waypointstop,rotatetoplr,state=3,shootplr
+:state=3:animate=1,state=0
+
+;End of Script

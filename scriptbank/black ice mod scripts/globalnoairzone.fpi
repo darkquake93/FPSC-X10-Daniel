@@ -1,0 +1,15 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone set air, no air
+
+;Triggers
+
+:state=0:hudreset,hudx=29.5,hudy=5,hudimagefine=databank/air.png,hudname=air,hudhide=1,hudmake=display,sethudalpha=air 50
+:state=0:state=1
+:state=1,plrwithinzone=1:state=2
+:state=2:hudshow=air
+:state=2:setairx=28,setairy=7,globalnoair=1,airtime=500,drowntime=200,setair=20
+:state=2:state=4
+

@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = move is near
+;Triggers
+
+:state=0:state=1
+:state=1:logicburst
+:state=1:incvar=$CA 1
+
+
+;End of Script

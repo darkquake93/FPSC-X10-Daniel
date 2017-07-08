@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant Off (after one cycle for ragdoll creation)
+
+;Triggers
+
+:state=1:destroy
+:state=0:state=1
+
+;End of Script

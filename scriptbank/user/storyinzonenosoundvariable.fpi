@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Story In Zone without the sound= variable, so as to not conflict with other trigger sounds that use it.
+
+;Triggers
+
+:state=0,plrwithinzone=1:state=1,video=$1,activateifused=1

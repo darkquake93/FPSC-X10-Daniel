@@ -1,0 +1,43 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Dark AI Behaviour Script
+
+;Triggers
+
+:nearactivatable=0:settarget,activatetarget=2
+
+:state=0,activated=1:dodarkai=2
+:state=0,isdarkaihurt:dodarkai=3
+
+:state=0,ifweapon=0,isdarkaifiring:state=8,animate=6,setframe=6,dodarkai=4
+:state=0,ifweapon=1,isdarkaifiring:state=2
+
+:state=0,ifweapon=2,isdarkaifiring:state=11,animate=8,setframe=8,dodarkai=4
+:state=0,ifweapon=3,isdarkaifiring:state=21,reloadweapon,animate=6,setframe=6,dodarkai=4
+:state=0,ifweapon=4,isdarkaifiring:state=31,animate=6,setframe=6,dodarkai=4
+
+:state=0,ifweapon=1,isdarkaiseeing:dodarkai=1
+:state=0:dodarkaianim
+
+:state=5:useweapon,rundecal=7,state=0,dodarkaianim
+:state=4:state=5,dodarkaianim
+:state=3:state=4,dodarkaianim
+:state=2:state=3,dodarkaianim
+
+:state=8:incframe=6
+:state=8,frameatend=6:state=0,reloadweapon,dodarkai=5,sound=audiobank\guns\reload.wav
+
+:state=11:incframe=8
+:state=11,framebeyond=8 75,ifweapon=2:useweapon
+:state=11,frameatend=8:state=0,dodarkai=5
+
+:state=21:incframe=6
+:state=21,framebeyond=6 65,ifweapon=3:useweapon
+:state=21,frameatend=6:state=0,dodarkai=5
+
+:state=31:incframe=6
+:state=31,frameatend=6,ifweapon=4:reloadweapon,useweapon,state=0,dodarkai=5
+
+;End of Script

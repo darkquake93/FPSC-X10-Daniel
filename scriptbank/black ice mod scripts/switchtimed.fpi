@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Switch Activate (toggle on and off)
+
+;Triggers
+
+:state=0:etimerstart,state=9
+:state=9,etimergreater=20000:state=10
+:state=10:state=1,plrsound=$0,activateifused=1,alttexture=1,state=2
+
+;End of Script

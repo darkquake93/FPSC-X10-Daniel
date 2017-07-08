@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = zoomed kill.
+
+;Triggers
+
+:state=0:state=1
+:state=1,plriszoomed:addhealth=-10000,state=1
+
+;End of Script

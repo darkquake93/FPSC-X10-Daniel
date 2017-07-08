@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On - make textures
+
+;Triggers
+
+:state=0:setalphafade=100
+:state=0:maketexture=scifi\characters\ai_1_d2.dds 1
+:state=0:maketexture=scifi\characters\ai_3_d2.dds 2
+:state=0:maketexture=scifi\characters\ai_5_d2.dds 3,state=1
+
+;End of Script

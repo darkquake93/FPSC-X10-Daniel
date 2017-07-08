@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = setup water
+
+;Triggers
+
+:state=0:watergreen=110,waterblue=120
+:state=0:water=1,waterflow=1,watercurrent=10,waterfogdist=2000,waterheight=515,state=1
+
+;End of Script

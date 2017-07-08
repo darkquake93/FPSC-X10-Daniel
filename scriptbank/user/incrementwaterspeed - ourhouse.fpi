@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Increases the water speed by the amount specified in "effectincwaterspeed", and will only work if the water speed is currently less than "effectwaterspeedless"
+
+;Triggers
+
+:plrwithinzone=1,effectwaterspeedless=100:effectincwaterspeed=1
+
+;End of Script

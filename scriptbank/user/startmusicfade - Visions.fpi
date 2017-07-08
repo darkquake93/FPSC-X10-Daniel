@@ -1,0 +1,24 @@
+;Artificial Intelligence Script
+
+;Conjured Header 
+
+desc          = Fades in and out of the music specified in state=1, and sets the "default" music to the one in state=0
+
+;Triggers
+
+:state=0:music=audiobank\music\Horror Game\Dark Forces.wav,musicvolume=0,state=1
+
+:state=1,plrdistfurther=500:musicvolume=0
+:state=1,plrdistwithin=499:music=audiobank\music\Horror Game\Dark Forces.wav,musicvolume=100,state=2
+
+:state=2,plrdistfurther=500:state=0
+:state=2,plrdistwithin=449:musicvolume=20
+:state=2,plrdistwithin=399:musicvolume=30
+:state=2,plrdistwithin=349:musicvolume=40
+:state=2,plrdistwithin=299:musicvolume=50
+:state=2,plrdistwithin=249:musicvolume=60
+:state=2,plrdistwithin=199:musicvolume=70
+:state=2,plrdistwithin=149:musicvolume=80
+:state=2,plrdistwithin=99:musicvolume=90
+
+;End of Script

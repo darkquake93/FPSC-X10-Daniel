@@ -1,0 +1,17 @@
+;Artificial Intelligence Script
+; 0-once face player
+; 1-once keep angle
+; 2-loop face player
+; 3-loop keep angle
+; 4-once face up
+; 5-loop face up
+; 6-character-spot-decal (at end of entity characters gun if available)
+
+;Header
+desc          = When activated, runs Decal Loop and loops sound specified in decal's fpe file. Can be switched off.
+
+;Triggers
+:state=0,activated=1:spawnon,rundecal=3,state=1
+:state=1,activated=0:state=0,rundecal=-1
+
+;End of Script

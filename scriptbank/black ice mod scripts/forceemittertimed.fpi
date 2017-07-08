@@ -1,0 +1,22 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = force emitter timed
+
+;Triggers
+
+:state=0:hudreset,hudx=29.5,hudy=5,hudimagefine=databank/air.png,hudname=air,hudhide=1,hudmake=display,sethudalpha=air 50
+:state=0:setforcedamage=0
+:state=0:etimerstart,state=1
+:state=1,etimergreater=8000:state=2
+:state=2:camshake=20,sound=$0,state=3
+:state=3,etimergreater=12000:state=4
+:state=4:camshake=30,sound=$0,state=5
+:state=5,etimergreater=13500:state=6
+:state=6:camshake=30,plrwobble=25,sound=$1,state=7
+:state=7,etimergreater=14000:sound=$0,state=8
+:state=8:emitforce=.0001,state=9
+:state=9,etimergreater=16000:state=10
+:state=10:sound=$1,plrwobble=30,moveplrz=150,state=11
+

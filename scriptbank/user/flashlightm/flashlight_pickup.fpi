@@ -1,0 +1,29 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Pickup Flashlight
+
+;goes with flashlight pickup object to activate the flashlight_source
+;put flashlight script in main for flashlight_source object
+
+;Triggers
+
+:state=0:state=1,hudreset,hudx=50,hudy=85,hudsize=18,hudtext=Acquired the Flashlight (press F to turn on / off),hudname=flashlight_pick,hudhide=1,hudmake=display
+
+:state=1:state=2,hudreset,hudx=50,hudy=85,hudsize=18,hudtext=Press 'Enter' to pick-up the Flashlight,hudname=flash_press,hudhide=1,hudmake=display
+
+:state=2:rundecal=5
+
+:state=2,plrdistwithin=40:hudshow=flash_press,hudfadeout=flash_press
+
+:state=2,plrdistwithin=40,plrusingaction=1:state=3,playertake,coloff,plrsound=audiobank\items\pickup.wav,hudunshow=flash_press
+
+:state=3:state=4,hudshow=flashlight_pick,hudfadeout=flashlight_pick
+
+:state=4:settargetname=flashlight_source,settarget,activatetarget=1
+
+
+
+
+;End of Script

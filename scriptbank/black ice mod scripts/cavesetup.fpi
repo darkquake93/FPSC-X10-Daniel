@@ -1,0 +1,8 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = turn off crosshair.
+;Triggers
+
+:state=0:crosshair=0,plrwobble=5,state=1

@@ -1,0 +1,15 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Set camera FOV
+
+;Triggers
+
+:state=0,plrwithinzone=1:state=1
+:state=1:camfov=45
+:state=3,plrwithinzone=1:state=4
+:state=3,plrwithinzone=0:state=0
+
+:state=4:state=3
+

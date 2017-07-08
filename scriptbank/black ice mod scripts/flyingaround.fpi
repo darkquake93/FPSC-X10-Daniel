@@ -1,0 +1,38 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = flying around
+
+;Triggers
+
+:state=0:dimvar=tilt
+:state=0:dimvar=target
+:state=0:dimvar=angle
+:state=0:dimvar=rand
+
+:state=0:setvar=tilt 0
+:state=0:setvar=angle 90
+:state=0:etimerstart,state=10
+:state=10,setvarrnd=rand 100:
+:state=10,varequal=1,camshake=30
+:state=10,etimergreater=10000:state=20
+
+:state=20:state=1
+
+:state=1:setvarrnd=tilt 6:setvarrnd=target 300:incvar=target 300
+:state=1,varequal=tilt 0:state=2
+:state=1,varequal=tilt 1:state=3
+
+:state=2:decvar=$CAZ 1:decvar=angle 1:decvar=target 1
+:state=2,varlesser=angle 75:setvar=angle 75:inc $CAZ 1
+:state=2,varequal=target 0:state=1
+
+:state=3:incvar=$CAZ 1:incvar=angle 1:decvar=target 1
+:state=3,vargreater=angle 105:setvar=angle 105:dec $CAZ 1
+:state=3,varequal=target 0:state=1
+
+
+
+
+

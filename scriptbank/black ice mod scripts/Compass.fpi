@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Compass
+
+;Triggers
+
+:state=0:compasson,compasspin,state=1
+
+;End of Script

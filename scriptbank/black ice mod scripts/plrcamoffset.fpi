@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On
+
+;Triggers
+
+:state=0:plrcamoffseton=1,state=1
+:state=1:plrcamoffsety=100
+
+;End of Script

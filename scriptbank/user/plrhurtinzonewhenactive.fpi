@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr Hurt In Zone when activated
+
+;Triggers
+
+:plrwithinzone=1,activated=1:state=1,plraddhealth=-1

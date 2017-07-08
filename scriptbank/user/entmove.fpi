@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Moves the entity to the target name. Moves up (just to get out of sight) when deactivated. I couldn't get any other action working to get it out of the way.
+
+;Triggers
+
+:state=0,activated=1:settargetname=move,movetotarget,timerstart,state=1
+:state=1,timergreater=400:freeze
+:state=1,activated=0:state=2,moveup=200
+;End of Script

@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone tilt player backwards on death
+
+;Triggers
+
+:state=0,plrwithinzone=1:plrdeath=4,plrdeathspeed=3,plrdeathbounce=20,state=1

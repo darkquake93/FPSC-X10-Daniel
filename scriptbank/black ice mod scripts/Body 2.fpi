@@ -1,0 +1,54 @@
+; Player Body Script 
+; Scripted by Plystire edited by s4real 
+
+;Header
+
+desc          = Player body
+
+;Triggers
+
+;Set Up Actions
+
+:state=0:nobulletcol=1,hidelimb=46
+
+;set up entity as player body
+:state=0:bindentitytocam=0,offsetentmovebeforerotate=1,offsetenty=-23,offsetentfore=-15,animate=1,dimvar=Calc,dimvar=Moving,dimvar=Anim,state=1
+
+
+; *** Hide Arm Limbs (If player has a weapon) ***
+
+:Haveweapright=1:nobulletcol=1,hidelimb=35,hidelimb=36,hidelimb=37,hidelimb=40,hidelimb=25,hidelimb=26,hidelimb=27,hidelimb=28
+:Haveweapright=0:nobulletcol=1,showlimb=35,showlimb=36,showlimb=37,showlimb=40,showlimb=25,showlimb=26,showlimb=27,showlimb=28
+
+
+
+;animations
+:ALWAYS:setvar=Moving 0
+:keypressed=17 1,plrusingrun=0:addvar=Moving 1
+:keypressed=17 1,plrusingrun=1:addvar=Moving 2
+:keypressed=31 1,plrusingrun=0:addvar=Moving -1
+:keypressed=31 1,plrusingrun=1:addvar=Moving -2
+
+:ALWAYS:setvar=Calc 0
+:keypressed=30 1:addvar=Calc -90
+:keypressed=32 1:addvar=Calc 90
+:vargreater=Moving 1:divvar=Calc 2
+:varless=Moving -1:divvar=Calc -2
+:ALWAYS:addvar=Calc 180
+
+
+:varnotequal=Calc 90,varnotequal=Calc -90: offsetentyang=%Calc
+:varequal=Moving 2:setanimspeed=100,setvar=Anim 5
+:varequal=Moving 1:setanimspeed=100,setvar=Anim 2
+:varequal=Moving 0:setanimspeed=100,setvar=Anim 1
+:varequal=Moving 0,varnotequal=Calc 180,plrusingrun=0:setanimspeed=100,setvar=Anim 3
+:varequal=Moving 0,varnotequal=Calc 180,plrusingrun=1:setanimspeed=100,setvar=Anim 3
+:varequal=Moving -1:setanimspeed=-100,setvar=Anim 2
+:varequal=Moving -2:setanimspeed=-100,setvar=Anim 5
+
+;Crouching
+:keypressed=46 1:addvar=Anim 30,offsetenty=7
+:keypressed=46 0:offsetenty=-23
+
+
+:ALWAYS:animate=%Anim

@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone swap to alt fire mode
+
+;Triggers
+
+:state=0,plrwithinzone=1:swaptoalt,state=1
+:state=1,plrwithinzone=0:state=0

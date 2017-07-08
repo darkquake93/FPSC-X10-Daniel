@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc = Show message to swing the axe
+;Triggers
+ 
+:state=0:hudreset,hudx=50,hudy=87,hudimagefine=gamecore\text\user\horror\leftclick.png,hudname=axe,hudhide=1,hudmake=display,state=1
+
+:plrdistwithin=50:hudshow=axe,hudfadeout=axe
+
+:state=1,plrwithinzone=1:hudshow=axe,state=2 
+
+:state=2,plrwithinzone=0:hudfadeout=axe,state=1
+
+;End of Script

@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On
+
+;Triggers
+
+:state=0:mutate=90 30
+:state=0:setalphafade=100,state=1
+:state=1:runfpidefault=1,state=2
+
+
+;End of Script

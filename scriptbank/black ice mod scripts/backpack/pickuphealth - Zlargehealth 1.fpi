@@ -1,0 +1,28 @@
+;Artificial Intelligence Script
+
+;Header By Tax78
+
+desc          = Health - var (for 5 health) and max 5 plrtake
+
+;Triggers
+:always:globalvar=Zlargehealth
+
+:state=0:hudreset,hudx=50,hudy=90,hudimagefine=gamecore\text\pickedupanitem.tga,hudname=itemprompt,hudhide=1,hudmake=display,state=10
+
+:state=10,varless=Zlargehealth 4,plrdistwithin=40:addvar=Zlargehealth 1,state=1,playertake,plrsound=audiobank\misc\ping.wav,hudshow=itemprompt,hudfadeout=itemprompt
+
+:state=1,varequal=Zlargehealth 1:state=2
+:state=1,varequal=Zlargehealth 2:state=3
+:state=1,varequal=Zlargehealth 3:state=4
+:state=1,varequal=Zlargehealth 4:state=5
+:state=1,varequal=Zlargehealth 5:state=6
+
+:state=2,varequal=Zlargehealth 0:etimerstart,state=20
+:state=3,varequal=Zlargehealth 1:etimerstart,state=20
+:state=4,varequal=Zlargehealth 2:etimerstart,state=20
+:state=5,varequal=Zlargehealth 3:etimerstart,state=20
+:state=6,varequal=Zlargehealth 4:etimerstart,state=20
+
+:state=20,etimergreater=500:plraddhealth=100,plrsound=audiobank\items\healthup.wav,state=21
+
+;End of Script

@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone set air, no air - hud already created
+
+;Triggers
+
+
+:state=0:state=1
+:state=1,plrwithinzone=1:state=2
+:state=2:globalnoair=1
+:state=2:state=4
+

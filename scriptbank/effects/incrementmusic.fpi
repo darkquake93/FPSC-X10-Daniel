@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Music Control
+
+;Triggers
+
+:plrwithinzone=1,volumeingamemusicless=100:volumeincingamemusic=1
+
+;End of Script

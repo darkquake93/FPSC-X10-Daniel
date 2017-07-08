@@ -1,0 +1,18 @@
+;Artificial Intelligence Script
+
+
+;Header
+
+desc = Iron Man Hud
+
+:state=0:state=1
+:state=1:hudreset,hudx=50,hudy=50,hudglobalx,hudglobaly,hudimagefine=gamecore\huds\blackicemod.png,hudname=blackicemod,hudhide=1,hudmake=display
+:state=1:state=2
+:state=2:hudshow=blackicemod
+
+
+;End of Script
+
+
+
+

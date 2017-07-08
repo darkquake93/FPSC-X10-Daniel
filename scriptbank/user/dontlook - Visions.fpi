@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc = Show message not to look behind you at start of level
+;Triggers
+ 
+:state=0:hudreset,hudx=50,hudy=87,hudimagefine=gamecore\text\user\horror\dontlook.png,hudname=dontlook,hudhide=1,hudmake=display,state=1
+
+:plrdistwithin=50:hudshow=dontlook,hudfadeout=dontlook
+
+:state=1,plrwithinzone=1:hudshow=dontlook,state=2 
+
+:state=2,plrwithinzone=0:hudfadeout=dontlook,destroy
+
+;End of Script

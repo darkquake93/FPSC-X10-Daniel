@@ -1,0 +1,23 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Leave corpse and use shader variable to stop eyes from glowing
+
+;Triggers
+
+
+:state=0:state=1,coloff,stopsound
+:state=1:selectshadervariable=1,setshadervariable=0,setframe=25,state=2,sound=audiobank\viral_outbreak\medusa_death.wav
+
+:state=2:incframe=25
+:state=2,framebeyond=25 50:selectshadervariable=3,setshadervariable=0
+:state=2,framebeyond=25 20:selectshadervariable=2,decshadervariable=1
+
+;FOR 30 FPS CAPTURE
+;:state=2,framebeyond=25 20:selectshadervariable=2,decshadervariable=2
+
+
+:state=2,frameatend=25:coloff
+
+;End of Script

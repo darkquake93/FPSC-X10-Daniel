@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone, triple strength
+
+;Triggers
+
+:state=0,plrwithinzone=1:playerstrength=300,sound=$0,state=1

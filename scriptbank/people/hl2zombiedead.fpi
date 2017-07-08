@@ -1,0 +1,10 @@
+desc          = Half-Life 2 Zombie playing dead Follow and Slash
+
+;Triggers
+
+:state=0:animate=93,state=10
+:state=10,plrdistwithin=100:animate=94,timerstart,state=11
+:state=11,timergreater=1000:state=1
+:state=1,plrdistfurther=40:rotatetoplr,movefore=2,animate=2
+
+:state=1,plrdistwithin=40,rateoffire:rotateplr,animate=92,plraddhealth=-20

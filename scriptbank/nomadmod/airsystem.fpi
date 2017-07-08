@@ -1,0 +1,168 @@
+;Artificial Intelligence Script
+
+;Header By Tax78
+
+desc          = Air and Oxygen System
+
+;Triggers
+;-------------------SET VAirBLE----------------------------------------------------------------------------------------------------------------------------
+:state=0:dimvar=watersystem,dimvar=slot,dimvar=NoW
+:state=0:setvar=watersystem 0
+:always:globalvar=watersystem,globalvar=slot,globalvar=NoW
+
+;--------------------SET HUDS-------------------------------------------------------------------------------------------------------------------------------
+;Air
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air.png,hudname=Air,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air1.png,hudname=Air1,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air2.png,hudname=Air2,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air3.png,hudname=Air3,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air4.png,hudname=Air4,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air5.png,hudname=Air5,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air6.png,hudname=Air6,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air7.png,hudname=Air7,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air8.png,hudname=Air8,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air9.png,hudname=Air9,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air10.png,hudname=Air10,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air11.png,hudname=Air11,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air12.png,hudname=Air12,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air13.png,hudname=Air13,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air14.png,hudname=Air14,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air15.png,hudname=Air15,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air16.png,hudname=Air16,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air17.png,hudname=Air17,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=8,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Air18.png,hudname=Air18,hudhide=1,hudmake=display
+;Oxygen
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen.png,hudname=Oxygen,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen1.png,hudname=Oxygen1,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen2.png,hudname=Oxygen2,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen3.png,hudname=Oxygen3,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen4.png,hudname=Oxygen4,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen5.png,hudname=Oxygen5,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen6.png,hudname=Oxygen6,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen7.png,hudname=Oxygen7,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen8.png,hudname=Oxygen8,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen9.png,hudname=Oxygen9,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen10.png,hudname=Oxygen10,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen11.png,hudname=Oxygen11,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen12.png,hudname=Oxygen12,hudhide=1,hudmake=display
+:state=0:hudreset,hudx=3,hudy=47,hudimage=languagebank\english\gamecore\huds\airsystem\Oxygen13.png,hudname=Oxygen13,hudhide=1,hudmake=display
+;---------------------NO SELECT SLOT 9 (Hands)----------------------------------------------------------------------------------------------------------
+:always:lockslot=9 1
+;---------------------SLOT VAR for return weapon----------------------------------------------------------------------------------------------------------
+;press 0 (no weapon)
+:plrunderwater=0,keypressed=11 1:setvar=NoW 1
+:varequal=NoW 1,plrunderwater=0,currentweapon=9:setvar=slot 1,setvar=NoW 0
+
+:currentweapon=1:setvar=slot 1
+:currentweapon=2:setvar=slot 2
+:currentweapon=3:setvar=slot 3
+:currentweapon=4:setvar=slot 4
+:currentweapon=5:setvar=slot 5
+:currentweapon=6:setvar=slot 6
+:currentweapon=7:setvar=slot 7
+:currentweapon=8:setvar=slot 8
+
+;---------------------SET WATER--------------------------------------------------------------------------------------------------------------------------------
+:state=0:water=1,waterfogdist=500,waterfogred=50,waterfoggreen=150,waterfogblue=150,waterred=50,watergreen=150,waterblue=150,waterheightofzone=0,state=10
+;---------------------SHOW HUDS--------------------------------------------------------------------------------------------------------------------------------
+;Oxygen
+:varless=watersystem -14:setvar=watersystem -14,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+
+:varequal=watersystem -14:hudshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -13:hudshow=Oxygen1,hudunshow=Oxygen,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -12:hudshow=Oxygen2,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -11:hudshow=Oxygen3,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -10:hudshow=Oxygen4,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -9:hudshow=Oxygen5,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -8:hudshow=Oxygen6,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -7:hudshow=Oxygen7,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -6:hudshow=Oxygen8,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -5:hudshow=Oxygen9,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -4:hudshow=Oxygen10,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -3:hudshow=Oxygen11,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem -2:hudshow=Oxygen12,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen13
+:varequal=watersystem -1:hudshow=Oxygen13,hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12
+
+:vargreater=watersystem -1:hudunshow=Oxygen,hudunshow=Oxygen1,hudunshow=Oxygen2,hudunshow=Oxygen3,hudunshow=Oxygen4,hudunshow=Oxygen5,hudunshow=Oxygen6,hudunshow=Oxygen7,hudunshow=Oxygen8,hudunshow=Oxygen9,hudunshow=Oxygen10,hudunshow=Oxygen11,hudunshow=Oxygen12,hudunshow=Oxygen13
+:varequal=watersystem 0:hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varless=watersystem 0:hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+
+;Air
+:varequal=watersystem 1:hudshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 2:hudshow=Air1,hudunshow=Air,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 3:hudshow=Air2,hudunshow=Air,hudunshow=Air1,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 4:hudshow=Air3,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 5:hudshow=Air4,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 6:hudshow=Air5,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 7:hudshow=Air6,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 8:hudshow=Air7,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 9:hudshow=Air8,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 10:hudshow=Air9,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 11:hudshow=Air10,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 12:hudshow=Air11,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 13:hudshow=Air12,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 14:hudshow=Air13,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 15:hudshow=Air14,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 16:hudshow=Air15,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air16,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 17:hudshow=Air16,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air17,hudunshow=Air18
+:varequal=watersystem 18:hudshow=Air17,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air18
+:varequal=watersystem 19:hudshow=Air18,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17
+:varequal=watersystem 20:hudunshow=Air18,hudunshow=Air,hudunshow=Air1,hudunshow=Air2,hudunshow=Air3,hudunshow=Air4,hudunshow=Air5,hudunshow=Air6,hudunshow=Air7,hudunshow=Air8,hudunshow=Air9,hudunshow=Air10,hudunshow=Air11,hudunshow=Air12,hudunshow=Air13,hudunshow=Air14,hudunshow=Air15,hudunshow=Air16,hudunshow=Air17
+;-----------------------UNDERWATER SYSTEM-------------------------------------------------------
+;IMMERSION
+:plrunderwater=1:camfov=0
+:state=10,plrunderwater=1:addvar=watersystem 1,etimerstart,fog=1,preventplrselectinggun=1,swapplrweapon=9,state=11
+;EXIT WATER AIR
+:state=12,vargreater=watersystem 0:subvar=watersystem 1,etimerstart,camfov=0,fog=0,preventplrselectinggun=0,state=15
+;EXIT WATER OXYGEN
+:state=12,varless=watersystem 0:camfov=0,fog=0,preventplrselectinggun=0,state=16
+:state=12,plralive=0:camfov=0,fog=0,state=52
+;underwater timer
+:state=11,plrunderwater=0,etimergreater=500:state=12
+:state=11,plrunderwater=1,etimergreater=1000:addvar=watersystem 1,etimerstart,state=11
+:state=11,plrunderwater=1,varequal=watersystem 20:etimerstart,state=50
+:state=11,plrunderwater=1,varequal=watersystem 0:etimerstart,state=14
+:state=11,plrunderwater=0,varless=watersystem 0:state=12
+:state=11,plralive=0:camfov=0,fog=0,state=52
+;reset air
+:state=13,plrunderwater=0,etimergreater=500:subvar=watersystem 1,etimerstart,state=13
+:state=13,plrunderwater=0,varequal=watersystem 0:state=10
+:state=13,plrunderwater=0,varless=watersystem 0:state=10
+:state=13,plrunderwater=1:state=10
+:state=13,plralive=0:camfov=0,fog=0,state=52
+;underwater start timer
+:state=14,plrunderwater=1,timergreater=100:addvar=watersystem 1,etimerstart,state=11
+:state=14,plrunderwater=0:state=12
+:state=14,plralive=0:camfov=0,fog=0,state=52
+;-------------exit air select weapon slot-------------------------------------------------
+:state=15,varequal=slot 1:swapplrweapon=1,state=13
+:state=15,varequal=slot 2:swapplrweapon=2,state=13
+:state=15,varequal=slot 3:swapplrweapon=3,state=13
+:state=15,varequal=slot 4:swapplrweapon=4,state=13
+:state=15,varequal=slot 5:swapplrweapon=5,state=13
+:state=15,varequal=slot 6:swapplrweapon=6,state=13
+:state=15,varequal=slot 7:swapplrweapon=7,state=13
+:state=15,varequal=slot 8:swapplrweapon=8,state=13
+;------------exit oxigen select weapon slot-----------------------------------------------
+:state=16,varequal=slot 1:swapplrweapon=1,state=10
+:state=16,varequal=slot 2:swapplrweapon=2,state=10
+:state=16,varequal=slot 3:swapplrweapon=3,state=10
+:state=16,varequal=slot 4:swapplrweapon=4,state=10
+:state=16,varequal=slot 5:swapplrweapon=5,state=10
+:state=16,varequal=slot 6:swapplrweapon=6,state=10
+:state=16,varequal=slot 7:swapplrweapon=7,state=10
+:state=16,varequal=slot 8:swapplrweapon=8,state=10
+
+;Air end
+:state=50,plrunderwater=0,etimergreater=500:state=12
+:state=50,plrunderwater=1,varless=watersystem 19:etimerstart,state=11
+:state=50,plrunderwater=1,etimergreater=1000:plrsubhealth=100,state=51
+:state=50,plrunderwater=1,plralive=0:camfov=0,fog=0,state=52
+:state=50,plralive=0:camfov=0,fog=0,state=52
+
+:state=51,plrunderwater=1:etimerstart,state=50
+:state=51,plrunderwater=0:state=12
+:state=51,plrunderwater=1,varless=watersystem 19:etimerstart,state=11
+:state=51,plralive=0:camfov=0,fog=0,state=52
+
+:state=52,plralive=1:preventplrselectinggun=0,state=0

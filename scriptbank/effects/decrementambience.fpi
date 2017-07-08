@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Ambience Control
+
+;Triggers
+
+:plrwithinzone=1,effectambiencegreater=0:effectdecambience=1
+
+;End of Script

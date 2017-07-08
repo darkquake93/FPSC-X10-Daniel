@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc = Appearing text when you walk next to an object
+;Triggers
+ 
+:state=0:hudreset,hudx=50,hudy=90,hudimagefine=languagebank\english\gamecore\text\user\infiltration\computer.tga,hudname=computer,hudhide=1,hudmake=display,state=1
+
+:plrdistwithin=60:hudshow=computer,hudfadeout=computer
+
+:state=1,plrwithinzone=1:hudshow=computer,state=2 
+
+:state=2,plrwithinzone=0:hudunshow=computer,state=1
+
+;End of Script

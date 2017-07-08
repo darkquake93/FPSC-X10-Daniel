@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = skyboxmask
+
+;Triggers
+
+:state=0:state=1,skyboxmask
+:state=1:skyboxmask
+;End of Script

@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Default Entity Behaviour (Nothing), doesn't rotate (good for falling entities sometimes)
+
+;Triggers
+
+:state=0:state=1,norotate
+
+;End of Script

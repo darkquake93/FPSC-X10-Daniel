@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Oxygen
+
+;Triggers
+
+:state=0,cantake,plrdistwithin=40:state=1,playertake,plraddair=500,plrsound=audiobank\items\healthup.wav
+
+;End of Script

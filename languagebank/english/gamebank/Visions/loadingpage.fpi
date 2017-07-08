@@ -1,0 +1,10 @@
+;AIScript from Wizard
+;Header
+desc          = Loading Page Wizard
+;Script
+:state=0:music=audiobank\music\Horror Game\Flow.wav
+:state=0:backdrop=gamecore\backdrops\loading1920.png
+:state=0:hudreset,hudx=50,hudy=50,hudimage=gamecore\backdrops\nothing.png,hudmake=display
+:state=0:hudreset,hudx=50,hudy=95,hudimage=gamecore\huds\loadingbarbox.png,hudmake=display
+:state=0:hudreset,hudx=50,hudy=95,hudimage=gamecore\huds\loadingbar.png,hudhide=1,hudtype=1,hudmake=internal
+:state=0:state=1

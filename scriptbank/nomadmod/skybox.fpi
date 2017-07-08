@@ -1,0 +1,12 @@
+;Skybox Script
+
+;Header
+
+desc          = Activate Skybox (only for current level)
+
+;Triggers
+
+:state=0:state=1
+:state=1:sky=skybank\nomadmod\Sci
+
+;End of Script

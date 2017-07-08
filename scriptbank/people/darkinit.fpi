@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Dark AI Init Script (roar, spawn animation)
+
+;Triggers
+
+:state=0,isdarkaiseeing:state=1,dodarkai=4,animate=0,setframe=0,sound=audiobank\voices\monster\spawn.wav
+:state=0:dodarkaianim
+:state=1:incframe=0
+:state=1,frameatend=0:state=0,dodarkai=5,runfpidefault=1
+
+;End of Script

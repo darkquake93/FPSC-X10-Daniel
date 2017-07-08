@@ -1,0 +1,18 @@
+
+
+
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Default Entity Behaviour (Nothing)
+
+;Triggers
+
+:state=0,plrwithinzone=1:state=1
+:state=1:plrspeedmod=50
+:state=1:state=2
+
+
+
+;End of Script

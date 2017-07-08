@@ -1,0 +1,9 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Multiple video files play one after the other in Zone and then teleports the player
+
+;Triggers
+
+:state=0,plrwithinzone=1:state=1,sound=$0,video=videobank/test4.avi,video=videobank/test5.avi,stopsound=$0,plrmoveifused,activateifused=1

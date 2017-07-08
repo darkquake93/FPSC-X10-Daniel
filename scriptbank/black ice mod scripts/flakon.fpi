@@ -1,0 +1,21 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone flak on
+
+;Triggers
+
+
+:state=0:state=1
+:state=1,plrwithinzone=1:state=3
+:state=3:state=4
+:state=4:showflakexplosion=1,state=0
+
+
+
+
+
+
+
+

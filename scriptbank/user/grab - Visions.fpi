@@ -1,0 +1,16 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc = Show message to grab / throw an object
+;Triggers
+ 
+:state=0:hudreset,hudx=50,hudy=87,hudimagefine=gamecore\text\user\horror\rightclick.png,hudname=rightclick,hudhide=1,hudmake=display,state=1
+
+:plrdistwithin=50:hudshow=rightclick,hudfadeout=rightclick
+
+:state=1,plrwithinzone=1:hudshow=rightclick,state=2 
+
+:state=2,plrwithinzone=0:hudfadeout=rightclick,state=1
+
+;End of Script

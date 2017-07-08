@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Teleports the player to the entity specified in "if used", and destroys the object
+
+;Triggers
+
+:state=0:rundecal=2,coloff
+:state=0,plrhigher=10,plrdistwithin=50:state=1,plrmoveifused,destroy
+
+;End of Script

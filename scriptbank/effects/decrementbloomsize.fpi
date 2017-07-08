@@ -1,0 +1,11 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Bloom Control
+
+;Triggers
+
+:plrwithinzone=1,effectbloomsizegreater=0:effectdecbloomsize=1
+
+;End of Script

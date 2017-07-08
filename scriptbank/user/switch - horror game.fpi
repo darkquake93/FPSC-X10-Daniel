@@ -1,0 +1,15 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Secret Switch
+
+;Triggers
+
+:state=0:hudreset,hudx=50,hudy=88,hudimagefine=gamecore\text\user\horror\secret.png,hudname=secret,hudhide=1,hudmake=display,state=10
+:plrdistwithin=50:hudshow=secret,hudfadeout=secret
+
+:state=10,plrdistwithin=50,plrusingaction=1:state=1,plrsound=$0,activateifused=1,alttexture=1
+:state=1,plrusingaction=0:random=60,destroy
+
+;End of Script

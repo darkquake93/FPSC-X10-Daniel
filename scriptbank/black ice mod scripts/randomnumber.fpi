@@ -1,0 +1,14 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = test
+
+;Triggers
+
+
+:state=0:state=1
+:state=1:dimlocalvar=idledelay,state=2
+:state=2:setvarrnd=idledelay 3000,addvar=idledelay 4000
+:state=2:debugvar=idledelay
+

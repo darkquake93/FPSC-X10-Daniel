@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Plr In Zone
+
+;Triggers
+
+:state=0:makeshader=blackandwhite databank/effects/BlackAndWhite.fx
+:state=0:state=1
+:state=1,plrwithinzone=1:useshader=blackandwhite
+:state=1:state=2
+:state=2,plrwithinzone=0:state=1

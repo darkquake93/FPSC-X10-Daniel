@@ -1,0 +1,10 @@
+;Artificial Intelligence Script
+ 
+;Header
+
+desc=Sets ambience to 10
+
+;Triggers
+ 
+:state=0,plrwithinzone=1:ambience=10,state=1
+;End of Script

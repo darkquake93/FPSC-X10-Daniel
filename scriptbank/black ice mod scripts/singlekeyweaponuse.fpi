@@ -1,0 +1,20 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Instant On
+
+;Triggers
+
+:state=0:weapontoslot=9
+:state=0:giveplrweapon=scifi\autoslug
+:state=0:hideweapon
+:state=0:lockslot=9 1
+:state=0:state=1
+:state=1,keypressed=33 1:state=4
+:state=4:swapplrweapon=scifi\autoslug,swaptoalt,state=6
+:state=6,plrweaponidle:plraction=1,state=11
+:state=11:showplrweapon,state=1
+
+
+;End of Script

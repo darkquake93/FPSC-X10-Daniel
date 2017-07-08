@@ -1,0 +1,23 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Autosave Arrow
+
+;Triggers
+
+:state=0:hudreset,hudx=50,hudy=50,hudimage=languagebank\english\gamecore\backdrops\basic\saving.tga,hudname=autosave,hudhide=1,hudmake=display
+:state=0:coloff,spinrate=4,floatrate=10
+:state=0,plrdistwithin=40:hide,etimerstart,hudshow=autosave,sound=audiobank\misc\checkpoint2.wav,state=1
+:state=1,etimergreater=1000:hudunshow=autosave,destroy,quicksavegame,state=2
+:state=2,none
+
+;End of Script
+
+
+
+
+
+
+
+ 

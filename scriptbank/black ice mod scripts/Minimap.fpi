@@ -1,0 +1,32 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = Minimap Top
+
+;Triggers
+
+
+:state=0:state=1
+
+:state=1:maptminzoom=0.5,maptmaxzoom=4.2,state=2
+:state=2:minimaptx=850,minimapty=100,mapsizeth=150,mapsizetw=150
+:state=2:maptbkred=129,maptbkgreen=101,maptbkblue=60
+
+:state=2:state=6
+
+
+:state=6:hudshow=mmt,enablemapt,maptsetzoom=1.3,etimerstart,state=90
+:state=6,scancodekeypressed=76:hudunshow=mmt,disablemapt,etimerstart,state=90
+:state=6,scancodekeypressed=73:maptzoomin,etimerstart,state=90
+:state=6,scancodekeypressed=77:maptzoomout,etimerstart,state=90
+:state=6,scancodekeypressed=79:maptsetzoom=2.5,etimerstart,state=90
+:state=6,scancodekeypressed=80:maptsetzoom=3.0,etimerstart,state=90
+:state=6,scancodekeypressed=81:maptsetzoom=4.2,etimerstart,state=90
+:state=6,scancodekeypressed=71:rotatemapt=0,etimerstart,state=90
+:state=6,scancodekeypressed=72:rotatemapt=1,etimerstart,state=90
+
+
+:state=90,etimergreater=500:state=6
+
+;End of Script

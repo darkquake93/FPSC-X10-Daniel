@@ -1,0 +1,12 @@
+;Music Script
+
+;Header
+
+desc          = Play music when player enters trigger zone
+
+;Triggers
+
+:state=0,plrwithinzone=1:music=audiobank\nomadmod\music\SciFiRush.ogg,soundscale=6,state=1
+:state=1:none
+
+;End of Script
