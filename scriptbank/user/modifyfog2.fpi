@@ -1,0 +1,24 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc          = increments the fog to a high value, then fog turns off
+;Triggers
+
+:state=0,plrwithinzone=1:fog=10,timerstart,state=1
+:state=1,timergreater=250:state=2
+:state=2:fog=25,timerstart,state=3 
+:state=3,timergreater=250:state=4
+:state=4:fog=40,timerstart,state=5 
+:state=5,timergreater=250:state=6
+:state=6:fog=55,timerstart,state=7 
+:state=7,timergreater=250:state=8
+:state=8:fog=70,timerstart,state=9 
+:state=9,timergreater=250:state=10
+:state=10:fog=85,timerstart,state=11 
+:state=11,timergreater=250:state=12
+:state=12:fog=90,state=13
+:state=13,timergreater=500:state=16
+:state=16:fog=0,state=17 
+
+;End of Script

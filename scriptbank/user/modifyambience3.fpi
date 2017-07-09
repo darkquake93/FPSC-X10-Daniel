@@ -1,0 +1,35 @@
+;Artificial Intelligence Script
+ 
+;Header
+
+desc=Gradually increase Ambience quickly, then decrease shortly after
+
+;Triggers
+ 
+:state=0,plrwithinzone=1:ambience=10,timerstart,state=1
+:state=1,timergreater=80:state=2
+:state=2:ambience=25,timerstart,state=3 
+:state=3,timergreater=80:state=4
+:state=4:ambience=40,timerstart,state=5 
+:state=5,timergreater=80:state=6
+:state=6:ambience=55,timerstart,state=7 
+:state=7,timergreater=80:state=8
+:state=8:ambience=70,timerstart,state=9 
+:state=9,timergreater=80:state=10
+:state=10:ambience=85,timerstart,state=11 
+:state=11,timergreater=80:state=12
+:state=12:ambience=100,state=13
+:state=13,timergreater=200:state=16
+:state=16:ambience=85,timerstart,state=17 
+:state=17,timergreater=80:state=18
+:state=18:ambience=70,timerstart,state=19 
+:state=19,timergreater=80:state=20
+:state=20:ambience=55,timerstart,state=21 
+:state=21,timergreater=80:state=22
+:state=22:ambience=40,timerstart,state=23 
+:state=23,timergreater=80:state=24
+:state=24:ambience=25,timerstart,state=25
+:state=25,timergreater=80:state=26
+:state=26:ambience=10,state=27 
+
+;End of Script

@@ -53,11 +53,9 @@ gamewon        = languagebank\english\gamebank\Visions\gamewon.fpi
 
 ; Levels
 
-levelmax=2
+levelmax=1
 levelfpm1      = mapbank\Visions.fpm
 levelfpi1      = languagebank\english\gamebank\Visions\loadingpage.fpi
-levelfpm2      = mapbank\Visions won.fpm
-levelfpi2      = languagebank\english\gamebank\Visions\loadingpage2.fpi
 
 ; Build Specific Flags
 
@@ -82,6 +80,8 @@ oneshotkills=0
 maxplayers=0
 spawnrandom=1
 uniquegamecode=
+
+
 
 
 
