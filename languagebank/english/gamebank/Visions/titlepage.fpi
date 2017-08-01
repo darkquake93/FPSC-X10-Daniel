@@ -9,7 +9,7 @@ desc          = Title Page Wizard
 :state=0:hudreset,hudx=50,hudy=65,hudimage=languagebank\english\gamecore\backdrops\basic\exitgame.png,hudtype=5,hudmake=button
 :state=0:hudreset,hudx=50,hudy=50,hudimage=gamecore\huds\pointer.png,hudmake=pointer
 :state=0:state=2
-:state=2:backdrop=gamecore\backdrops\zombie\gamemenu_background2.jpg
+:state=2:backdrop=gamecore\backdrops\zombie\gamemenu_background3.jpg
 :state=2,hudselectionmade=1:destroy
 :state=2,hudselectionmade=5:quitgame,destroy
 :state=2,hudselectionmade=2:loadgame

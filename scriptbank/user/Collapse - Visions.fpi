@@ -1,0 +1,12 @@
+;Artificial Intelligence Script
+
+;Header
+
+desc = Show message that Vision is collapsing, and play sound0
+ 
+:state=0:hudreset,hudx=50,hudy=87,hudimagefine=gamecore\text\user\horror\collapse.png,hudname=collapse,hudhide=1,hudmake=display,state=1
+
+:plrdistwithin=50,activated=1:sound=$0,timerstart,hudshow=collapse,timergreater=1000,hudfadeout=collapse
+
+
+;End of Script

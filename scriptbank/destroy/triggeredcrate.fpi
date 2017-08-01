@@ -1,0 +1,13 @@
+;Artificial Intelligence Script
+ 
+;Header
+ 
+desc          = Destroys when triggered, as a crate
+ 
+;Triggers
+ 
+:state=0:state=1
+:state=1,activated=1:runfpi=destroy\crumble.fpi
+ 
+ 
+;End of Script

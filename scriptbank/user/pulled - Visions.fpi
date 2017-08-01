@@ -11,6 +11,6 @@ desc = Show pulled message
 
 :state=1,plrwithinzone=1:hudshow=pulled,state=2 
 
-:state=2,plrwithinzone=0:hudfadeout=pulled,state=1
+:state=2,plrwithinzone=0:hudfadeout=pulled,destroy
 
 ;End of Script

@@ -2,11 +2,11 @@
 
 ;Header
 
-desc          = Destroys itself when activated
+desc          = Destroys itself when activated for crates
 
 ;Triggers
 
 
-:state=0,activated=1:runfpi=destroy/crumble.fpi
+:state=0,activated=1:runfpi=destroy/crumbleactused.fpi
 
 ;End of Script

@@ -12,7 +12,7 @@ desc          = "Throws" when activated
 :state=2,timergreater=800:settargetname=blood2,activatetarget=1,state=3
 :state=3,timergreater=1000:settargetname=blood3,activatetarget=1,state=4
 :state=4,timergreater=1200:settargetname=blood4,activatetarget=1,state=5
-:state=5,timergreater=1300:freeze
+:state=5,timergreater=2000:freeze
 
 ;LAY IDLE AND DETECT PLAYER WHEN CLOSE
 :state=0,plrdistfurther=75:animate=98

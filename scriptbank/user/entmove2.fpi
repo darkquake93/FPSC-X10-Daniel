@@ -7,6 +7,5 @@ desc          = Moves another entity to a different target name to not conflict 
 ;Triggers
 
 :state=0,activated=1:settargetname=move2,timerstart,movetotarget,animate=5,state=1
-:state=1,timergreater=900:freeze,colon
-:state=1,activated=0:state=2,moveup=200
+:state=1,timergreater=300:freeze,colon
 ;End of Script

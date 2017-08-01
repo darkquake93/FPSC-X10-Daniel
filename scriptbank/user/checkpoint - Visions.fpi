@@ -2,7 +2,7 @@
 
 ;Header
 
-desc = Show message that checkpoint has been reached.
+desc = Show message that checkpoint has been reached, destroys immediately after
 ;Triggers
  
 :state=0:hudreset,hudx=50,hudy=87,hudimagefine=gamecore\text\user\horror\checkpoint.png,hudname=checkpoint,hudhide=1,hudmake=display,state=1
@@ -11,6 +11,6 @@ desc = Show message that checkpoint has been reached.
 
 :state=1,plrwithinzone=1:hudshow=checkpoint,state=2 
 
-:state=2,plrwithinzone=0:hudfadeout=checkpoint,state=1
+:state=2,plrwithinzone=0:hudfadeout=checkpoint,destroy
 
 ;End of Script

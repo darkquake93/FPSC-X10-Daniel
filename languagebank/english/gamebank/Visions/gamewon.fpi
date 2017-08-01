@@ -3,8 +3,8 @@
 desc          = Game Won Page Wizard
 ;Script
 :state=0:music=audiobank\music\Horror Game\Flow.wav
-:state=0:backdrop=gamecore\backdrops\Basic\background.jpg
-:state=0:hudreset,hudx=50,hudy=50,hudimage=languagebank\english\gamecore\backdrops\basic\gamecomplete.png,hudmake=display
+:state=0:backdrop=gamecore\backdrops\zombie\Visions Complete.jpg
+:state=0:hudreset,hudx=50,hudy=50,hudimage=,hudmake=display
 :state=0:timerstart,state=1
 :state=1,timergreater=6000:destroy
 

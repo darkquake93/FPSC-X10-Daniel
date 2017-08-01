@@ -6,7 +6,7 @@ desc          = Moves the entity to the target name. Moves up (just to get out o
 
 ;Triggers
 
-:state=0,activated=1:settargetname=move,movetotarget,timerstart,state=1
-:state=1,timergreater=400:freeze
+:state=0,activated=1:settargetname=move,timerstart,movetotarget,animate=5,state=1
+:state=1,timergreater=390:freeze
 :state=1,activated=0:state=2,moveup=200
 ;End of Script
